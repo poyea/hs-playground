@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e6545d75cc486e547d2a608c61fe7167d296bf36b2e62adaa69b76171eb94990
+
+name:           guess-the-number
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/poyea/hs-playground/guess-the-number#readme>
+homepage:       https://github.com/poyea/hs-playground/guess-the-number#readme
+bug-reports:    https://github.com/poyea/hs-playground/guess-the-number/issues
+author:         John Law
+maintainer:     johnlaw@linux.com
+copyright:      2020 John Law
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/poyea/hs-playground/guess-the-number
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_guess_the_number
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable guess-the-number-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_guess_the_number
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , guess-the-number
+  default-language: Haskell2010
+
+test-suite guess-the-number-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_guess_the_number
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , guess-the-number
+  default-language: Haskell2010
