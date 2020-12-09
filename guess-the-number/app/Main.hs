@@ -1,7 +1,6 @@
 module Main where
 
-import Control.Monad (when)
-import Lib
+import Lib ( checkNumber )
 import System.Exit (exitSuccess)
 
 main = do
